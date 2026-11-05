@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Next Level Gaming & Esports Arena</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    border-bottom:3px solid #00ff99;
+}
+
+.logo{
+    width:180px;
+    border-radius:50%;
+    border:3px solid #00ff99;
+}
+
+/* NAVIGATION */
+nav{
+    background:#1e293b;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff99;
+}
+
+/* HERO SECTION */
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('gaming-bg.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h2{
+    color:#00ff99;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+}
+
+/* FEATURES */
+section{
+    padding:40px 20px;
+}
+
+section h2{
+    text-align:center;
+    color:#00ff99;
+    margin-bottom:30px;
+}
+
+ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    list-style:none;
+}
+
+li{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+li:hover{
+    transform:scale(1.05);
+    background:#00ff99;
+    color:black;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00ff99;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    border-top:3px solid #00ff99;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .hero h2{
+        font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        padding:10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg" alt="Next Level Gaming Logo" class="logo">
+
+<h1>Next Level Gaming & Esports Arena</h1>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Packages</a>
+    <a href="fees.html">Calculate Fees</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+
+<h2 id="welcome-text">Welcome Gamers!</h2>
+
+<p>
+Experience competitive gaming, VR experiences,
+esports training, birthday parties and much more.
+</p>
+
+<a href="packages.html" class="btn">
+View Packages
+</a>
+
+</div>
+
+<section>
+
+<h2>Features</h2>
+
+<ul>
+
+<li>Esports Competitions</li>
+
+<li>High-End Gaming PCs</li>
+
+<li>Virtual Reality Experiences</li>
+
+<li>Birthday Packages</li>
+
+<li>Corporate Team Building</li>
+
+<li>Gaming Tournaments</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>&copy; 2026 Next Level Gaming & Esports Arena</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// Change heading text every 3 seconds
+
+const messages = [
+    "Welcome Gamers!",
+    "Join The Battle!",
+    "Level Up Your Skills!",
+    "Experience Next-Level Gaming!"
+];
+
+let index = 0;
+
+setInterval(() => {
+    index++;
+
+    if(index >= messages.length){
+        index = 0;
+    }
+
+    document.getElementById("welcome-text").textContent =
+        messages[index];
+
+}, 3000);
+
+</script>
+
+</body>
+</html>

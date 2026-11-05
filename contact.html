@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | Next Level Gaming & Esports Arena</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    border-bottom:3px solid #00ff99;
+}
+
+.logo{
+    width:180px;
+    border-radius:50%;
+    border:3px solid #00ff99;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#1e293b;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff99;
+}
+
+/* PAGE TITLE */
+
+.hero{
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    color:#00ff99;
+    font-size:2.8rem;
+}
+
+/* CONTACT SECTION */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,255,153,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#00ff99;
+    margin-bottom:10px;
+}
+
+.social-list{
+    list-style:none;
+}
+
+.social-list li{
+    padding:10px;
+    margin:10px 0;
+    background:#0f172a;
+    border-left:4px solid #00ff99;
+    border-radius:5px;
+}
+
+.map-button{
+    display:inline-block;
+    margin-top:15px;
+    background:#00ff99;
+    color:black;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.map-button:hover{
+    background:white;
+}
+
+/* CONTACT FORM */
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#00ff99;
+    color:black;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+#message{
+    margin-top:15px;
+    color:#00ff99;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    border-top:3px solid #00ff99;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        padding:10px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg" alt="Next Level Gaming Logo" class="logo">
+
+<h1>Next Level Gaming & Esports Arena</h1>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Packages</a>
+    <a href="fees.html">Calculate Fees</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1 id="contactTitle">Contact Us</h1>
+</div>
+
+<div class="container">
+
+<div class="card">
+    <h2>Phone</h2>
+    <p>011 555 2345</p>
+</div>
+
+<div class="card">
+    <h2>Email</h2>
+    <p>info@nextlevelgaming.co.za</p>
+</div>
+
+<div class="card">
+    <h2>Address</h2>
+    <p>
+        123 Gaming Street<br>
+        Sandton<br>
+        Johannesburg
+    </p>
+</div>
+
+<div class="card">
+    <h2>Social Media</h2>
+
+    <ul class="social-list">
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>TikTok</li>
+        <li>X (Twitter)</li>
+    </ul>
+</div>
+
+<div class="card">
+
+    <h2>Find Us On Google Maps</h2>
+
+    <a href="https://maps.google.com/maps?q=sandton"
+       target="_blank"
+       class="map-button">
+
+       Open Map
+
+    </a>
+
+</div>
+
+<div class="card">
+
+    <h2>Send Us A Message</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <input type="email" id="email" placeholder="Your Email">
+
+    <textarea id="query"
+    rows="5"
+    placeholder="Your Message"></textarea>
+
+    <button onclick="sendMessage()">
+        Submit
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>&copy; 2026 Next Level Gaming & Esports Arena</p>
+
+</footer>
+
+<script>
+
+// Rotating page title
+
+const titles = [
+    "Contact Us",
+    "Get In Touch",
+    "We'd Love To Hear From You"
+];
+
+let current = 0;
+
+setInterval(() => {
+
+    current++;
+
+    if(current >= titles.length){
+        current = 0;
+    }
+
+    document.getElementById("contactTitle").textContent =
+    titles[current];
+
+}, 3000);
+
+// Contact Form Validation
+
+function sendMessage(){
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const query =
+    document.getElementById("query").value.trim();
+
+    if(name === "" ||
+       email === "" ||
+       query === ""){
+
+        alert("Please complete all fields.");
+
+        return;
+    }
+
+    document.getElementById("message")
+    .innerHTML =
+    "Thank you, " +
+    name +
+    "! Your message has been received.";
+
+}
+
+</script>
+
+</body>
+</html>

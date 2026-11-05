@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Packages | Next Level Gaming & Esports Arena</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    border-bottom:3px solid #00ff99;
+}
+
+.logo{
+    width:180px;
+    border-radius:50%;
+    border:3px solid #00ff99;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#1e293b;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff99;
+}
+
+/* PAGE TITLE */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#00ff99;
+    font-size:3rem;
+}
+
+/* TABLE */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#1e293b;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+th{
+    background:#00ff99;
+    color:black;
+    padding:15px;
+    font-size:18px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #444;
+}
+
+tr:hover{
+    background:#334155;
+}
+
+.package-link{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.package-link:hover{
+    color:#00ff99;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#00ff99;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:3px solid #00ff99;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        padding:10px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg" alt="Next Level Gaming Logo" class="logo">
+
+<h1>Next Level Gaming & Esports Arena</h1>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Packages</a>
+    <a href="fees.html">Calculate Fees</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1 id="titleText">Gaming Packages</h1>
+</div>
+
+<div class="container">
+
+<table>
+
+<tr>
+    <th>Package</th>
+    <th>Price</th>
+</tr>
+
+<tr>
+    <td>
+        <a href="gamerpass.html" class="package-link">
+            Ultimate Gamer Pass
+        </a>
+    </td>
+    <td>R1500</td>
+</tr>
+
+<tr>
+    <td>VIP Gaming Experience</td>
+    <td>R1500</td>
+</tr>
+
+<tr>
+    <td>Esports Training Package</td>
+    <td>R1500</td>
+</tr>
+
+<tr>
+    <td>Birthday Party Package</td>
+    <td>R1500</td>
+</tr>
+
+<tr>
+    <td>VR Experience</td>
+    <td>R750</td>
+</tr>
+
+<tr>
+    <td>Racing Simulator Challenge</td>
+    <td>R750</td>
+</tr>
+
+<tr>
+    <td>Escape Room Challenge</td>
+    <td>R750</td>
+</tr>
+
+</table>
+
+<center>
+<a href="fees.html" class="btn">
+Calculate Your Total Cost
+</a>
+</center>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Next Level Gaming & Esports Arena</p>
+</footer>
+
+<script>
+
+// Rotating page title
+
+const packageTitles = [
+    "Gaming Packages",
+    "Choose Your Adventure",
+    "Level Up Your Experience",
+    "Find Your Perfect Package"
+];
+
+let currentTitle = 0;
+
+setInterval(() => {
+
+    currentTitle++;
+
+    if(currentTitle >= packageTitles.length){
+        currentTitle = 0;
+    }
+
+    document.getElementById("titleText").textContent =
+    packageTitles[currentTitle];
+
+}, 3000);
+
+</script>
+
+</body>
+</html>

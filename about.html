@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Next Level Gaming & Esports Arena</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    border-bottom:3px solid #00ff99;
+}
+
+.logo{
+    width:180px;
+    border-radius:50%;
+    border:3px solid #00ff99;
+}
+
+/* NAVIGATION */
+nav{
+    background:#1e293b;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff99;
+}
+
+/* PAGE BANNER */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#00ff99;
+    font-size:3rem;
+}
+
+/* CONTENT SECTIONS */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,255,153,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#00ff99;
+    margin-bottom:15px;
+}
+
+.goals{
+    list-style:none;
+}
+
+.goals li{
+    background:#0f172a;
+    margin:10px 0;
+    padding:15px;
+    border-left:5px solid #00ff99;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    border-top:3px solid #00ff99;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        padding:10px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.jpg" alt="Next Level Gaming Logo" class="logo">
+
+<h1>Next Level Gaming & Esports Arena</h1>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="packages.html">Packages</a>
+    <a href="fees.html">Calculate Fees</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1 id="aboutTitle">About Us</h1>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>History</h2>
+        <p>
+            Founded in 2023 by Jason Naidoo,
+            Next Level Gaming & Esports Arena provides
+            premium gaming experiences through cutting-edge
+            technology, esports competitions and interactive entertainment.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Vision</h2>
+        <p>
+            To become South Africa's leading esports venue
+            and gaming entertainment destination.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Mission</h2>
+        <p>
+            To provide exciting, innovative and memorable
+            gaming experiences for players of all ages.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Goals</h2>
+
+        <ul class="goals">
+            <li>Grow esports culture</li>
+            <li>Host professional tournaments</li>
+            <li>Provide quality gaming equipment</li>
+            <li>Create unforgettable experiences</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Next Level Gaming & Esports Arena</p>
+</footer>
+
+<script>
+
+// Small animation effect
+
+const titles = [
+    "About Us",
+    "Meet The Team",
+    "Our Gaming Journey"
+];
+
+let current = 0;
+
+setInterval(() => {
+
+    current++;
+
+    if(current >= titles.length){
+        current = 0;
+    }
+
+    document.getElementById("aboutTitle").textContent =
+    titles[current];
+
+}, 3000);
+
+</script>
+
+</body>
+</html>
